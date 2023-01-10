@@ -142,7 +142,7 @@ class Swimming(Training):
                 * self.weight * self.duration)
 
 
-TYPES_TRAINING: Dict[str, type[Training]] = {
+TYPES_TRAINING: Dict[str, type] = {
     'SWM': Swimming,
     'RUN': Running,
     'WLK': SportsWalking
