@@ -1,5 +1,6 @@
 """Homework is important."""
 from dataclasses import dataclass, asdict
+from typing import Dict
 
 
 @dataclass
@@ -141,7 +142,7 @@ class Swimming(Training):
                 * self.weight * self.duration)
 
 
-TYPES_TRAINING: dict[str, type[Training]] = {
+TYPES_TRAINING: Dict[str, type[Training]] = {
     'SWM': Swimming,
     'RUN': Running,
     'WLK': SportsWalking
