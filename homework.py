@@ -14,11 +14,11 @@ class InfoMessage:
     calories: float
 
     MESSAGE_TEMPLATE = (
-        "Тип тренировки: {training_type}; "
-        "Длительность: {duration:.3f} ч.; "
-        "Дистанция: {distance:.3f} км; "
-        "Ср. скорость: {speed:.3f} км/ч; "
-        "Потрачено ккал: {calories:.3f}.")
+        'Тип тренировки: {training_type}; '
+        'Длительность: {duration:.3f} ч.; '
+        'Дистанция: {distance:.3f} км; '
+        'Ср. скорость: {speed:.3f} км/ч; '
+        'Потрачено ккал: {calories:.3f}.')
 
     def get_message(self) -> str:
         """Возвращает строковое представление информационного сообщения."""
@@ -142,6 +142,8 @@ class Swimming(Training):
                 * self.weight * self.duration)
 
 
+'''Автопроверка Python 3.7.4 не пропускает
+   TYPES_TRAINING: dict[str, type[Training]].'''
 TYPES_TRAINING: Dict[str, type] = {
     'SWM': Swimming,
     'RUN': Running,
@@ -161,8 +163,7 @@ def read_package(workout_type: str, data: list) -> Training:
 
 def main(training: Training) -> None:
     """Главная функция."""
-    info = training.show_training_info()
-    print(info.get_message())
+    print((training.show_training_info()).get_message())
 
 
 if __name__ == '__main__':
